@@ -7,7 +7,7 @@ const Navbar = () => {
         <div >
             {/* LOGO */}
             <div>
-                <Link href="#">
+                <Link href="/">
                     Massimo
                 </Link>
             </div>
