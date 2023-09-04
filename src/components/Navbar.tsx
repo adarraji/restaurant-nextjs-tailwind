@@ -10,8 +10,8 @@ const Navbar = () => {
         <div className="h-12 text-red-500 p-4 items-center flex justify-between border-b-2 border-b-red-500 uppercase md:h-24 lg:px-20 xl:px-40" >
             {/* LEFT LINKS */}
             <div className="hidden md:flex gap-4 flex-1">
-                <Link href="/">Home page</Link>
-                <Link href="/menu">Home page</Link>
+                <Link href="/">Homepage</Link>
+                <Link href="/menu">Menu</Link>
                 <Link href="/">Contact</Link>
             </div>
             {/* LOGO */}
