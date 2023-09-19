@@ -17,7 +17,9 @@ Open [http://localhost:3000](http://localhost:3000) with your browser
 * Next.js
 * Typescript
 * PostgreSQL
+* Docker for PostgreSQL
 * NextAuth.js
+
 
 <br />
 
