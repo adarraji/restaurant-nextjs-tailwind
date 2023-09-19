@@ -40,6 +40,11 @@ For more information
 
 ### DB
 
+DATABASE_URL
+POSTGRES_USER
+POSTGRES_PASSWORD
+POSTGRES_DB
+
 <br />
 
 ## Authors
