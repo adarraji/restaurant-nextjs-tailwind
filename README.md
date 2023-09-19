@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js Restaurant Application
 
-## Getting Started
+To run the application
 
-First, run the development server:
+1. Clone this repo
+2. Run `npm install`
+3. Run `npm run dev`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Open [http://localhost:3000](http://localhost:3000) with your browser
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Built With
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+* HTML
+* CSS
+* Javascript
+* Next.js
+* Typescript
+* PostgreSQL
+* NextAuth.js
 
-## Learn More
+<br />
 
-To learn more about Next.js, take a look at the following resources:
+## Environmental Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### NEXTAUTH_SECRET
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Used to encrypt the NextAuth.js JWT, and to hash email verification tokens. This is the default value for the secret option in NextAuth and Middleware.
 
-## Deploy on Vercel
+For more information
+* [Auth.js OAuth authentication - Configuring Auth.js](https://authjs.dev/getting-started/oauth-tutorial#1-configuring-authjs)
+* [NEXTAUTH_SECRET](https://next-auth.js.org/configuration/options#nextauth_secret)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`NEXTAUTH_SECRET="This is an example"`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<br />
+
+
+### DB
+
+<br />
+
+## Authors
+
+- **Ali Darraji** - [https://github.com/adarraji](https://github.com/adarraji)
+
+<br />
