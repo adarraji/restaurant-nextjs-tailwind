@@ -14,7 +14,7 @@ export const GET = async (req: NextRequest) => {
                 const orders = await prisma.order.findMany()
                 return new NextResponse(JSON.stringify(orders), { status: 200 })
             }
-            const orders = prisma.order.findMany({
+            const orders = await prisma.order.findMany({
                 where: {
                     userEmail: session.user.email!
                 }
