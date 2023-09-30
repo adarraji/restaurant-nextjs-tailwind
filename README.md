@@ -20,6 +20,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser
 * Docker for PostgreSQL
 * NextAuth.js
 * Google Cloud as auth provider
+* Prisma
+* TanStack React Query
 
 
 <br />
