@@ -40,11 +40,11 @@ const OrdersPage = () => {
                 <tbody>
                     {data.map((item: OrderType) => (
                         <tr className="text-sm md:text-base bg-red-50 " key={item.id}>
-                            <td className="hidden md:block py-6 px-1">1237861238721</td>
-                            <td className="py-6 px-1">19.07.2023</td>
-                            <td className="py-6 px-1">89.90</td>
-                            <td className="hidden md:block py-6 px-1">Big Burger Menu (2), Veggie Pizza (2), Coca Cola 1L (2)</td>
-                            <td className="py-6 px-1">On the way (approx. 10min)...</td>
+                            <td className="hidden md:block py-6 px-1">{item.id}</td>
+                            <td className="py-6 px-1">{item.createdAt.toString().slice(0, 10)}</td>
+                            <td className="py-6 px-1">{item.price}</td>
+                            <td className="hidden md:block py-6 px-1">{item.products[0].title}</td>
+                            <td className="py-6 px-1">{item.status}</td>
                         </tr>
                     ))}
                 </tbody>
