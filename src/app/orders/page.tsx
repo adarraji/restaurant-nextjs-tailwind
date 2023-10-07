@@ -26,6 +26,13 @@ const OrdersPage = () => {
 
     if (isLoading || status === "loading") return 'Loading...'
 
+    const handleUpdate = (e: React.FormEvent<HTMLFormElement>, id: string) => {
+        e.preventDefault()
+        const form = e.target as HTMLFormElement
+        const input = form.elements[0] as HTMLInputElement
+        const status = input.value
+    }
+
     return (
         <div className="p-4 lg:px-20 xl:px-40">
             <table className="w-full border-separate border-spacing-3">
@@ -48,7 +55,7 @@ const OrdersPage = () => {
 
                             {session?.user.isAdmin ? (
                                 <td>
-                                    <form>
+                                    <form className="flex items-center justify-center gap-4" onSubmit={(e) => handleUpdate(e, item.id)}>
                                         <input placeholder={item.status} className="p-2 ring-1 ring-red-100 rounded-md" />
                                         <button className="bg-red-500 p-2 rounded-full">
                                             <Image src="/edit.png" alt="" width={20} height={20} />
