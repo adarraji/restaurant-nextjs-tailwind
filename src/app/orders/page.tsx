@@ -5,6 +5,7 @@ import React from 'react'
 import { OrderType } from "@/types/types";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const OrdersPage = () => {
 
@@ -47,7 +48,12 @@ const OrdersPage = () => {
 
                             {session?.user.isAdmin ? (
                                 <td>
-                                    <input placeholder={item.status} className="p-2 ring-1 ring-red-100 rounded-md" />
+                                    <form>
+                                        <input placeholder={item.status} className="p-2 ring-1 ring-red-100 rounded-md" />
+                                        <button className="bg-red-500 p-2 rounded-full">
+                                            <Image src="/edit.png" alt="" width={20} height={20} />
+                                        </button>
+                                    </form>
                                 </td>
                             ) : (
                                 <td className="py-6 px-1">{item.status}</td>
