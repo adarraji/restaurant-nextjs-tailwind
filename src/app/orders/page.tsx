@@ -6,6 +6,7 @@ import { OrderType } from "@/types/types";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { toast } from "react-toastify";
 
 const OrdersPage = () => {
 
@@ -49,6 +50,7 @@ const OrdersPage = () => {
         const status = input.value
 
         mutation.mutate({ id, status })
+        toast.success("The order statushas been changed!")
     }
 
     if (isLoading || status === "loading") return 'Loading...'
