@@ -22,6 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser
 * Google Cloud as auth provider
 * Prisma
 * TanStack React Query
+* React Toastify
 
 
 <br />
