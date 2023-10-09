@@ -13,7 +13,7 @@ const Price = ({ product }: PriceProps) => {
     const [selected, setSelected] = useState(0)
 
     useEffect(() => {
-        setTotal(quantity * (product.options?.length ? product.price + product.options[selected].additionalPrice : price))
+        setTotal(quantity * (product.options?.length ? product.price + product.options[selected].additionalPrice : product.price))
 
 
     }, [quantity, selected, product])
