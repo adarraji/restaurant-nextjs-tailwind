@@ -1,12 +1,12 @@
 import prisma from "@/utils/connect"
 import { NextRequest, NextResponse } from "next/server"
 
-type ParamsType = {
-    id: string
+type ParamsProps = {
+    params: { id: string }
 }
 
 // GET SINGLE PRODUCT
-export const GET = async (req: NextRequest, { params }: { params: ParamsType }) => {
+export const GET = async (req: NextRequest, { params }: ParamsProps) => {
     const { id } = params
 
     try {
