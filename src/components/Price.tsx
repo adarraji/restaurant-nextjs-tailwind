@@ -14,7 +14,7 @@ const Price = ({ price, id, options }: PriceProps) => {
     const [selected, setSelected] = useState(0)
 
     useEffect(() => {
-        setTotal(quantity * (options ? price + options[selected].additionalPrice : price))
+        setTotal(quantity * (options?.length ? price + options[selected].additionalPrice : price))
 
 
     }, [quantity, selected, options, price])
@@ -25,7 +25,7 @@ const Price = ({ price, id, options }: PriceProps) => {
             <h2 className="text-2xl font-bold">{total}</h2>
             {/* OPTIONS CONTAINER */}
             <div className="flex gap-4">
-                {options?.map((option, index) => (
+                {options?.length && options?.map((option, index) => (
                     <button
                         key={option.title}
                         className="min-w-[6rem] p-2 ring-1 ring-red-400 rounded-md"
