@@ -37,6 +37,12 @@ export type CartItemType = {
     quantitiy: string;
 };
 
+export type CartType = {
+    products: CartItemType[];
+    totalItems: number;
+    totalPrice: number;
+  };
+
 export type ActionType = {
     addTocart: (item: CartItemType) => void;
     removeFromcart: (item: CartItemType) => void;
