@@ -36,3 +36,8 @@ export type CartItemType = {
     optionTitle: string;
     quantitiy: string;
 };
+
+export type ActionType = {
+    addTocart: (item: CartItemType) => void;
+    removeFromcart: (item: CartItemType) => void;
+}
