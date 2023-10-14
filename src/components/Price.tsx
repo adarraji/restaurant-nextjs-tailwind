@@ -34,19 +34,7 @@ const Price = ({ product }: PriceProps) => {
         })
         toast.success("Product added to the cart!")
     }
-
-    addToCart(
-        {
-            id: product.id,
-            title: product.title,
-            img: product.img,
-            price: total,
-            ...(product.options?.length && { optionTitle: product.options[selected].title }),
-            quantity: quantity,
-        }
-    )
-
-
+    
     return (
         <div className="flex flex-col gap-4">
             <h2 className="text-2xl font-bold">{total}</h2>
