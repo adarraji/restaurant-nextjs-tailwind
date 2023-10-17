@@ -1,5 +1,6 @@
 "use client"
 
+import CheckoutForm from "@/components/CheckoutForm";
 import { Elements } from "@stripe/react-stripe-js";
 import { StripeElementsOptions, loadStripe } from "@stripe/stripe-js";
 import { useEffect, useState } from "react"
@@ -17,16 +18,19 @@ const PaymentPage = ({ params }: { params: { id: string } }) => {
                     method: "POST"
                 })
                 const data = await res.json()
-                setClientSecret(data.client_secret)
+                setClientSecret(data.clientSecret)
+                console.log(clientSecret)
+
             } catch (err) {
                 console.log(err)
             }
+
         }
 
         makeRequest()
 
     }, [id])
- 
+
     const options: StripeElementsOptions = {
         clientSecret,
         appearance: {
