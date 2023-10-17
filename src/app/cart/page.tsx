@@ -29,7 +29,7 @@ const CartPage = () => {
                         userEmail: session.user.email
                     })
                 })
-                const data= await res.json()
+                const data = await res.json()
                 router.push(`/pay/${data.id}`)
 
             } catch (err) {
