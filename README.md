@@ -12,7 +12,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser
 ## Built With
 
 * HTML
-* CSS
+* Tailwind CSS
 * Javascript
 * Next.js
 * Typescript
@@ -23,6 +23,8 @@ Open [http://localhost:3000](http://localhost:3000) with your browser
 * Prisma
 * TanStack React Query
 * React Toastify
+* Zustand state management
+* Stripe payment
 
 
 <br />
@@ -65,6 +67,13 @@ DATABASE_URL
 POSTGRES_USER
 POSTGRES_PASSWORD
 POSTGRES_DB
+
+
+### Stripe
+Publishable key
+Secret key
+
+
 
 <br />
 
