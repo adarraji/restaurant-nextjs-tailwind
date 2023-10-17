@@ -1,9 +1,9 @@
 import prisma from "@/utils/connect";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
-export const POST = async ({ params }: { params: { orderId: string } }) => {
+export const POST = async (request: NextRequest, { params }: { params: { orderId: string } }) => {
     const { orderId } = params
 
     try {
@@ -24,6 +24,7 @@ export const POST = async ({ params }: { params: { orderId: string } }) => {
             });
 
             // UPDATE ORDER
+
             await prisma.order.update({
                 where: {
                     id: orderId,
@@ -32,8 +33,10 @@ export const POST = async ({ params }: { params: { orderId: string } }) => {
             })
 
             // RETURN STRIPE PAYMENT INTENT CLIENT SECRET
-            return new NextResponse(JSON.stringify({ clientSecret: paymentIntent.client_secret }), { status: 200 })
-
+            return new NextResponse(
+                JSON.stringify({ clientSecret: paymentIntent.client_secret }),
+                { status: 200 }
+            )
 
         } else {
             return new NextResponse(JSON.stringify({ message: "Order not found!" }), { status: 404 })
