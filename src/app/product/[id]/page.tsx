@@ -33,7 +33,7 @@ const SingleProductPage = async ({ params }: SingleProductProps) => {
                 <p>{singleProduct.desc}</p>
                 <Price product={singleProduct} />
             </div>
-            <DeleteButton />
+            <DeleteButton id={singleProduct.id} />
         </div>
     )
 }
