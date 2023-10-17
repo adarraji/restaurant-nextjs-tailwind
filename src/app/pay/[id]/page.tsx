@@ -1,8 +1,9 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 
 const PaymentPage = ({ params }: { params: { id: string } }) => {
+    const [clientSecret, setClientSecret] = useState("");
     const { id } = params
 
     useEffect(() => {
@@ -11,8 +12,8 @@ const PaymentPage = ({ params }: { params: { id: string } }) => {
                 const res = await fetch(`http://localhost:3000/api/create-intent/${id}`, {
                     method: "POST"
                 })
-                const data = res.json()
-
+                const data = await res.json()
+                setClientSecret(data.client_secret)
             } catch (err) {
                 console.log(err)
             }
