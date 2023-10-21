@@ -70,9 +70,9 @@ const AddPage = () => {
 
     const res = await fetch("https://api.cloudinary.com/v1_1/da2mpxdb9/image/upload", {
       method: "POST",
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
+      // headers: {
+      //   "Content-Type": "multipart/form-data",
+      // },
       body: data,
     });
 
@@ -182,6 +182,7 @@ const AddPage = () => {
             />
             <button
               className="bg-gray-500 p-2 text-white"
+              type="button"
               onClick={() => setOptions((prev) => [...prev, option])}
             >
               Add Option
