@@ -40,7 +40,7 @@ const AddPage = () => {
     return <p>Loading...</p>;
   }
 
-  if (status === "unauthenticated") {
+  if (status === "unauthenticated" || !session?.user.isAdmin) {
     return
   }
 
