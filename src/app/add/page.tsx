@@ -44,7 +44,7 @@ const AddPage = () => {
     router.push("/");
   }
 
-  if (session && session.user && session.user.isAdmin) {
+  if (session && session.user && session?.user.isAdmin) {
 
     const handleChange = (
       e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
