@@ -19,7 +19,7 @@ const Price = ({ product }: PriceProps) => {
 
     useEffect(() => {
         useCartStore.persist.rehydrate()
-    },[])
+    }, [])
 
     useEffect(() => {
         setTotal(quantity * (product.options?.length ? product.price + product.options[selected].additionalPrice : product.price))
@@ -47,7 +47,7 @@ const Price = ({ product }: PriceProps) => {
                 {product.options?.length && product.options?.map((option, index) => (
                     <button
                         key={option.title}
-                        className="min-w-[6rem] p-2 ring-1 ring-red-400 rounded-md"
+                        className="min-w-[6rem] p-2 ring-1 ring-custom-border-button rounded-md"
                         style={{
                             background: selected === index ? "rgb(248 113 113)" : "white",
                             color: selected === index ? "white" : "rgb(248 113 113)",
@@ -61,7 +61,7 @@ const Price = ({ product }: PriceProps) => {
             {/* QUANTITIY AND ADD BUTTON CONTAINER */}
             <div className="flex justify-between items-center">
                 {/* QUANTITY */}
-                <div className="flex justify-between w-full p-3 ring-1 ring-red-500">
+                <div className="flex justify-between w-full p-3 ring-1 ring-custom-border-button">
                     <span>Quantitiy</span>
                     <div className="flex gap-4 items-center">
                         <button onClick={() => setQuantity(prev => (prev > 1 ? prev - 1 : 1))}>{"<"}</button>
@@ -70,7 +70,7 @@ const Price = ({ product }: PriceProps) => {
                     </div>
                 </div>
                 {/* CART BUTTON */}
-                <button className="uppercase w-56 bg-red-500 text-white p-3 ring-1 ring-red-500" onClick={handleCart}>Add to Cart</button>
+                <button className="uppercase w-56 bg-custom-bg-button text-custom-button p-3 ring-1 ring-custom-border-button" onClick={handleCart}>Add to Cart</button>
             </div>
         </div>
     )

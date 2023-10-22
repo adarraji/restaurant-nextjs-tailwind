@@ -21,9 +21,9 @@ const CategoryPage = async ({ params }: CategoryProps) => {
     const products: ProductType[] = await getData(params.category)
 
     return (
-        <div className="flex flex-wrap text-red-500">
+        <div className="flex flex-wrap text-custom-cat">
             {products.map(item => (
-                <Link className="w-full h-[60vh] border-r-2 border-b-2 border-red-500 sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group even:bg-fuchsia-50" href={`/product/${item.id}`} key={item.id}>
+                <Link className="w-full h-[60vh] border-r-2 border-b-2 border-custom-border sm:w-1/2 lg:w-1/3 p-4 flex flex-col justify-between group even:bg-custom-bg-cat-even" href={`/product/${item.id}`} key={item.id}>
                     {/* IMAGE CONTAINER */}
                     {item.img &&
                         <div className="relative h-80">
@@ -34,7 +34,7 @@ const CategoryPage = async ({ params }: CategoryProps) => {
                     <div className="flex items-center justify-between font-bold ">
                         <h1 className="text-2xl uppercase p-2">{item.title}</h1>
                         <p className="group-hover:hidden text-xl">${item.price}</p>
-                        <button className="hidden group-hover:block uppercase bg-red-500 text-white p-2 rounded-md">Add to Cart</button>
+                        <button className="hidden group-hover:block uppercase bg-custom-bg-button text-custom-button p-2 rounded-md">Add to Cart</button>
                     </div>
                 </Link>
             ))}

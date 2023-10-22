@@ -5,9 +5,9 @@ import CartIcon from "./CartIcon"
 import Image from "next/image"
 import UserLinks from "./UserLinks"
 
-const Navbar = () => {    
+const Navbar = () => {
     return (
-        <div className="h-12 text-red-500 p-4 items-center flex justify-between border-b-2 border-b-red-500 uppercase md:h-24 lg:px-20 xl:px-40" >
+        <div className="h-12 text-custom-menu p-4 items-center flex justify-between border-b-2 border-b-custom-border uppercase md:h-24 lg:px-20 xl:px-40" >
             {/* LEFT LINKS */}
             <div className="hidden md:flex gap-4 flex-1">
                 <Link href="/">Homepage</Link>
@@ -31,7 +31,7 @@ const Navbar = () => {
                     <Image src="/phone.png" alt="" width={20} height={20} />
                     <span>123 456 78</span>
                 </div>
-                <UserLinks/>
+                <UserLinks />
                 <CartIcon />
             </div>
         </div>

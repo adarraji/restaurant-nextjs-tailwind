@@ -11,7 +11,7 @@ const Offer = () => {
         <h1 className="text-white text-5xl font-bold xl:text-6xl">Delicious Burger & French Fries</h1>
         <p className="text-white xl:text-xl"> Progressively simplify effective e-toilers and process-centric methods of empowerment. Quickly pontificate parallel.</p>
         <CountDown />
-        <button className="bg-red-500 text-white py-3 px-6 rounded-md">Order Now</button>
+        <button className="bg-custom-bg-button text-custom-button py-3 px-6 rounded-md">Order Now</button>
       </div>
 
       {/* IMAGE CONTAINER */}
