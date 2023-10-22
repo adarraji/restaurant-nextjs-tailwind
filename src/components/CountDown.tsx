@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const CountDown = () => {
 
-    let difference = +new Date(`10/10/2023`) - +new Date();
+    let difference = +new Date(`01/10/2024`) - +new Date();
     const [delay, setDelay] = useState(difference);
     const [days, setDays] = useState(0)
     const [hours, setHours] = useState(0)
