@@ -29,7 +29,7 @@ const PaymentPage = ({ params }: { params: { id: string } }) => {
 
         makeRequest()
 
-    }, [id])
+    }, [id, clientSecret])
 
     const options: StripeElementsOptions = {
         clientSecret,
