@@ -40,8 +40,8 @@ const AddPage = () => {
     return <p>Loading...</p>;
   }
 
-  if (status === "unauthenticated" || !session?.user?.isAdmin) {
-    router.push("/");
+  if (status === "unauthenticated" || !session?.user.isAdmin) {
+    return
   }
 
   const handleChange = (
