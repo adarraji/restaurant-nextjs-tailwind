@@ -28,7 +28,7 @@ const CountDown = () => {
         return () => {
             clearInterval(timer);
         };
-    });
+    }, [difference, delay, days, hours, minutes, seconds]);
     return (
         <span className="font-bold text-5xl text-yellow-300">
             {days}:{hours}:{minutes}:{seconds}
