@@ -3,11 +3,9 @@ import Link from "next/link"
 import { MenuType } from "@/types/types";
 
 const getData = async () => {
-    const res = await fetch("http://localhost:3000/api/categories", { cache: "no-store" })
+    const res = await fetch("http://localhost/api/categories", { cache: "no-store" })
     if (!res.ok) {
-        console.log("ERROR!!!!!!!!!!!!!!!!!!   ", res.text)
         throw new Error("Failed!")
-
     }
     return res.json()
 }
