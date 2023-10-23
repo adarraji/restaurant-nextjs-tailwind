@@ -3,7 +3,7 @@ import Link from "next/link"
 import { MenuType } from "@/types/types";
 
 const getData = async () => {
-    const res = await fetch("http://localhost/api/categories", { cache: "no-store" })
+    const res = await fetch("http://localhost:3000/api/categories", { cache: "no-store" })    
     if (!res.ok) {
         throw new Error("Failed!")
     }
@@ -12,7 +12,7 @@ const getData = async () => {
 
 const MenuPage = async () => {
 
-    const menu: MenuType = await getData()
+    const menu: MenuType = await getData()    
     return (
         <div className="p-4 lg:px-20 xl:px40 h-[calc(100vh-6rem)]  md:h-[calc(100vh-9rem)] flex flex-col md:flex-row items-center">
             {menu && menu.map(category => (
