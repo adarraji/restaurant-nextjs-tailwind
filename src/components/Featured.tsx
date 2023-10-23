@@ -1,6 +1,7 @@
 import { ProductType } from "@/types/types"
 import Image from "next/image"
 import React from 'react'
+export const dynamic = "‘orce-dynamic";
 
 
 const getData = async () => {
