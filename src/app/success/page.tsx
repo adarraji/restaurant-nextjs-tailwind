@@ -10,7 +10,7 @@ const SuccessPage = () => {
     useEffect(() => {
         const makeRequest = async () => {
             try {
-                await fetch(`http://localhost:3000/api/confirm/${payment_intent}`, {
+                await fetch(`${process.env.SERVER_URL}/api/confirm/${payment_intent}`, {
                     method: "PUT"
                 })
                 router.push("/orders")

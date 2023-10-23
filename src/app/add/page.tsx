@@ -85,7 +85,7 @@ const AddPage = () => {
 
     try {
       const url = await upload();
-      const res = await fetch("http://localhost:3000/api/products", {
+      const res = await fetch(`${process.env.SERVER_URL}/api/products`, {
         method: "POST",
         body: JSON.stringify({
           img: url,
