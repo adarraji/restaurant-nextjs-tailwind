@@ -9,6 +9,10 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { toast } from "react-toastify";
 
+
+// const URL = "http://localhost:3000"
+const URL = process.env.NEXT_PUBLIC_SERVER_URL
+
 const OrdersPage = () => {
 
     const { data: session, status } = useSession()
@@ -21,7 +25,7 @@ const OrdersPage = () => {
     const { isLoading, error, data } = useQuery({
         queryKey: ['orders'],
         queryFn: () =>
-            fetch(`${process.env.SERVER_URL}/api/orders`).then(
+            fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/orders`).then(
                 (res) => res.json(),
             ),
     })
@@ -29,7 +33,7 @@ const OrdersPage = () => {
     const queryClient = useQueryClient()
     const mutation = useMutation({
         mutationFn: ({ id, status }: { id: string; status: string }) => {
-            return fetch(`${process.env.SERVER_URL}/api/orders/${id}`,
+            return fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/orders/${id}`,
                 {
                     method: "PUT",
                     headers: {

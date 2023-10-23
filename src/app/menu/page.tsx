@@ -3,7 +3,7 @@ import Link from "next/link"
 import { MenuType } from "@/types/types";
 
 const getData = async () => {
-    const res = await fetch(`${process.env.SERVER_URL}/api/categories`, { cache: "no-store" })
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/categories`, { cache: "no-store" })
     if (!res.ok) {
         throw new Error("Failed!")
     }
