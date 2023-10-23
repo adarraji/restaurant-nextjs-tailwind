@@ -1,7 +1,7 @@
 import { ProductType } from "@/types/types"
 import Image from "next/image"
 import React from 'react'
-export const dynamic = "force-dynamic";
+
 
 
 const getData = async () => {
