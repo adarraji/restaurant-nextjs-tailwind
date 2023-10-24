@@ -24,15 +24,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          <QueryProvider>
-            <Notification />
+        {/* <AuthProvider> */}
+          {/* <QueryProvider> */}
+            {/* <Notification /> */}
             {/* <Navbar /> */}
-            {children}
+            {/* {children} */}
             {/* <Footer /> */}
-            <ToastContainer position="bottom-right" theme="dark" autoClose={3000} />
-          </QueryProvider>
-        </AuthProvider>
+            {/* <ToastContainer position="bottom-right" theme="dark" autoClose={3000} /> */}
+          {/* </QueryProvider> */}
+        {/* </AuthProvider> */}
       </body>
     </html>
   )
