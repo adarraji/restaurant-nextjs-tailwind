@@ -22,7 +22,7 @@ const Price = ({ product }: PriceProps) => {
     }, [])
 
     useEffect(() => {
-        setTotal(quantity * (product.options?.length ? product.price + product.options[selected].additionalPrice : product.price))
+        setTotal(quantity * (product.options?.length ? Number(product.price) + Number(product.options[selected].additionalPrice) : product.price))
 
 
     }, [quantity, selected, product])
@@ -62,7 +62,7 @@ const Price = ({ product }: PriceProps) => {
             <div className="flex justify-between items-center">
                 {/* QUANTITY */}
                 <div className="flex justify-between w-full p-3 ring-1 ring-custom-border-button">
-                    <span>Quantitiy</span>
+                    <span>Quantity</span>
                     <div className="flex gap-4 items-center">
                         <button onClick={() => setQuantity(prev => (prev > 1 ? prev - 1 : 1))}>{"<"}</button>
                         <span>{quantity}</span>
