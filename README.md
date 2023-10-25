@@ -73,6 +73,7 @@ Also you need to add your server URI in Authorized JavaScript origins (for examp
 
 ### Stripe
 `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+
 `STRIPE_SECRET_KEY`
 
 
