@@ -129,6 +129,24 @@ You can see the website [here](https://restaurant-nextjs-tailwind.vercel.app)
 <br />
 <br />
 
+![Image 8](public/images/image-08.png)
 <br />
 <br />
+
+![Image 9](public/images/image-09.png)
+<br />
+<br />
+
+![Image 10](public/images/image-10.png)
+<br />
+<br />
+
+![Image 11](public/images/image-11.png)
+<br />
+<br />
+
+![Image 12](public/images/image-12.png)
+<br />
+<br />
+
 <br />
