@@ -14,7 +14,8 @@ module.exports = {
       },
       colors: {
         'custom-bg-notf': '#d4400f',
-        'custom-notf': '#ffffff',             
+        'custom-notf': '#ffffff', 
+        'custom-bg-notf': '#000000',            
         'custom-menu': '#808080',
         'custom-bg-menu-small': '#d4400f',
         'custom-menu-small': '#ffffff',
