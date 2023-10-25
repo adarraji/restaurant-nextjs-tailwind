@@ -80,7 +80,9 @@ Also you need to add your server URI in Authorized JavaScript origins (for examp
 ## Deployment
 
 Next.js app is Deployed on [Vercel](https://vercel.com/)
+
 PostgreSQL DB is deployed on [Render](https://render.com)
+
 You can see the website [here](https://restaurant-nextjs-tailwind.vercel.app)
 
 
