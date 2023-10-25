@@ -1,5 +1,8 @@
 # Next.js Restaurant Application
 
+
+ You can see the website [here](https://restaurant-nextjs-tailwind.vercel.app)
+
 To run the application
 
 1. Clone this repo
@@ -17,12 +20,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser
 * Next.js
 * Typescript
 * PostgreSQL
-* Docker for PostgreSQL
+* Prisma
 * NextAuth.js
 * Google Cloud as auth provider
-* Prisma
 * TanStack React Query
-* React Toastify
 * Zustand state management
 * Stripe payment
 
@@ -61,18 +62,25 @@ Also you need to add your server URI in Authorized JavaScript origins (for examp
 
 
 
-### DB
+### Nextjs Server URL
 
-DATABASE_URL
-POSTGRES_USER
-POSTGRES_PASSWORD
-POSTGRES_DB
+`NEXT_PUBLIC_SERVER_URL`
+
+### PstgreSQL Databse URL
+
+`DATABASE_URL`
 
 
 ### Stripe
-Publishable key
-Secret key
+`NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+`STRIPE_SECRET_KEY`
 
+
+## Deployment
+
+Next.js app is Deployed on [Vercel](https://vercel.com/)
+PostgreSQL DB is deployed on [Render](https://render.com)
+You can see the website [here](https://restaurant-nextjs-tailwind.vercel.app)
 
 
 <br />
@@ -81,4 +89,43 @@ Secret key
 
 - **Ali Darraji** - [https://github.com/adarraji](https://github.com/adarraji)
 
+<br />
+
+## Deploy status
+![Vercel](https://restaurant-nextjs-tailwind.vercel.app/?app=restaurant-nextjs-tailwind)
+
+
+## Screenshots
+<br />
+
+![Image 1](public/images/image-01.png)
+<br />
+<br />
+
+![Image 2](public/images/image-02.png)
+<br />
+<br />
+
+![Image 3](public/images/image-03.png)
+<br />
+<br />
+
+![Image 4](public/images/image-04.png)
+<br />
+<br />
+
+![Image 5](public/images/image-05.png)
+<br />
+<br />
+
+![Image 6](public/images/image-06.png)
+<br />
+<br />
+
+![Image 7](public/images/image-07.png)
+<br />
+<br />
+
+<br />
+<br />
 <br />
